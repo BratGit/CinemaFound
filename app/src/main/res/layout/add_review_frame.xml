@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="60dp"
+    android:background="#dfe6e9"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fffefe"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0FFF95"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+<!--                <Button-->
+<!--                    android:id="@+id/closeReviewFrame"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    android:background="@drawable/button_background_red"-->
+<!--                    android:gravity="center"-->
+<!--                    -->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:textColor="@color/quantum_white_100" />-->
+
+                <com.melnykov.fab.FloatingActionButton
+                    android:id="@+id/publicateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/checkmark3"
+                    android:scaleType="fitCenter"
+                    app:fab_colorNormal="#03A9F4"
+                    app:fab_colorPressed="#3F51B5"
+                    app:fab_colorRipple="#3F51B5"/>
+
+                <com.melnykov.fab.FloatingActionButton
+                    android:id="@+id/closeReviewFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/close_fab"
+                    android:scaleType="fitCenter"
+                    app:fab_colorNormal="@color/colorAccent_Light"
+                    app:fab_colorPressed="#7E0413"
+                    app:fab_colorRipple="#7E0413"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:text="Оценка"
+                    android:textColor="#103900"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RatingBar
+                android:id="@+id/reviewRating"
+                android:layout_width="239dp"
+                android:layout_height="47dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Отзыв"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/reviewText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addPhotoReview"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Добавить фото"
+                android:textColor="@color/quantum_white_100" />
+
+            <Button
+                android:id="@+id/deletePhotoButton"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_background"
+                android:text="Удалить фото"
+                android:textColor="@color/quantum_white_100" />
+
+
+        </LinearLayout>
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/addReviewImage"-->
+        <!--        android:layout_width="200dp"-->
+        <!--        android:layout_height="100dp"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        tools:srcCompat="@drawable/quantum_ic_cloud_off_vd_theme_24"-->
+        <!--        android:layout_marginBottom="15dp"/>-->
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/addReviewImages"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/publicateButton"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Опубликовать"-->
+<!--            android:textColor="@color/quantum_white_100" />-->
+
+    </LinearLayout>
+
+</LinearLayout>

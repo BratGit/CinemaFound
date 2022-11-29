@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/blue_to_pink_gradient"
+        android:duration="4500" />
+    <item
+        android:drawable="@drawable/mac_blue_gradient"
+        android:duration="4500"/>
+    <item
+        android:drawable="@drawable/telegram_background"
+        android:duration="4500" />
+    <item
+        android:drawable="@drawable/orange_to_coral_background"
+        android:duration="4500" />
+    <item
+        android:drawable="@drawable/sea_background"
+        android:duration="4500" />
+</animation-list>

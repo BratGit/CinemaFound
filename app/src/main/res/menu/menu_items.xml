@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mapItem"
+        android:icon="@drawable/map_ico2"
+        android:title="Map"
+        android:orderInCategory="1">
+    </item>
+    <item
+        android:id="@+id/mapsList"
+        android:icon="@drawable/list"
+        android:title="List"
+        android:orderInCategory="1">
+    </item>
+    <item
+        android:id="@+id/about"
+        android:title="Routes"
+        android:icon="@drawable/route_icon"
+        android:orderInCategory="1">
+    </item>
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        android:orderInCategory="1">
+    </item>
+    <item
+        android:id="@+id/profile"
+        android:title="Me"
+        android:icon="@drawable/profile_logo"
+        android:orderInCategory="1"/>
+</menu>

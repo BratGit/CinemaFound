@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="CinemaFoundMainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--Customize your theme here.-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/auth_transition
+        </item>
+
+        <item name="android:windowSharedElementExitTransition">
+            @transition/auth_transition
+        </item>
+
+        <item name="android:fragmentSharedElementEnterTransition">
+            @transition/review_transition
+        </item>
+
+        <item name="android:fragmentSharedElementReturnTransition">
+            @transition/review_transition
+        </item>
+    </style>
+
+    <style name="AppTheme_Light" parent="Theme.Design.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_Light</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Light</item>
+        <item name="colorAccent">@color/colorAccent_Light</item>
+    </style>
+
+    <style name="AppTheme_Contrast" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_Contrast</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_Contrast</item>
+        <item name="colorAccent">@color/colorAccent_Contrast</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+</resources>

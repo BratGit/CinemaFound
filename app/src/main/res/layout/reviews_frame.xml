@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="40dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dfe6e9"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:background="#00cec9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/quantum_white_100"
+                android:id="@+id/reviewsPlaceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Place name"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/reviewsImageView"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="150dp"
+                android:transitionName="placePhotoTransition"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/quantum_ic_cloud_off_vd_theme_24"
+                android:layout_marginBottom="15dp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:paddingTop="220dp"
+            android:id="@+id/reviewsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/addReviewFromList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/plus_fab"
+            android:scaleType="fitCenter"
+            app:fab_colorNormal="#009688"
+            app:fab_colorPressed="#4db6ac"
+            app:fab_colorRipple="#4db6ac"/>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/closeReviewListFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="16dp"
+            android:src="@drawable/close_fab"
+            android:scaleType="fitCenter"
+            app:fab_colorNormal="@color/colorAccent_Light"
+            app:fab_colorPressed="#7E0413"
+            app:fab_colorRipple="#7E0413"/>
+
+
+    </FrameLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/addReviewFromList"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginBottom="75dp"-->
+<!--        android:background="@drawable/button_background"-->
+<!--        android:text="Добавить"-->
+<!--        android:textColor="@color/quantum_white_100" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/closeReviewListFrame"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:background="@drawable/button_background_red"-->
+<!--        android:text="Закрыть"-->
+<!--        android:textColor="@color/quantum_white_100" />-->
+</FrameLayout>

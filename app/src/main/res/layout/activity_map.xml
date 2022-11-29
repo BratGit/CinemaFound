@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/slidingUpPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:umanoDragView="@id/reviewLinearLayout"
+        app:umanoOverlay="false"
+        app:umanoPanelHeight="0dp"
+        app:umanoParallaxOffset="100dp"
+        app:umanoScrollableView="@id/reviewTextView"
+        app:umanoShadowHeight="4dp"
+        tools:context=".MapActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="top">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mapViewLinearLayout">
+
+                <fragment
+                    android:id="@+id/mapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <!--wass 752dp-->
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="60dp"
+                android:background="@android:color/white"
+                app:menu="@menu/menu_items" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/reviewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/closeBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/close"
+                    android:onClick="onCloseButtonClick" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/arrow_up" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/slidingReviewLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reviewTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:id="@+id/reviewImageView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="Средняя оценка"
+                        android:textSize="13sp" />
+
+                    <!--                    <RatingBar-->
+                    <!--                        android:id="@+id/reviewRatingBar"-->
+                    <!--                        android:layout_width="239dp"-->
+                    <!--                        android:layout_height="47dp"-->
+                    <!--                        android:layout_gravity="center"-->
+                    <!--                        android:layout_marginBottom="15dp"-->
+                    <!--                        android:clickable="false"-->
+                    <!--                        android:focusable="false"/>-->
+
+                    <TextView
+                        android:id="@+id/rateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:text="0.0"
+                        android:textSize="25sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/addReviewButton"
+                            android:layout_width="239dp"
+                            android:layout_height="43dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_background"
+                            android:onClick="onAddReviewClick"
+                            android:text="Отзывы"
+                            android:textColor="@color/quantum_white_100" />
+
+                        <Button
+                            android:id="@+id/confirmMarkerButton"
+                            android:layout_width="239dp"
+                            android:layout_height="43dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_background"
+                            android:onClick="onSubmitButtonClickListener"
+                            android:text="Подтвердить место"
+                            android:textColor="@color/quantum_white_100" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/createRouteButton"
+                        android:layout_width="239dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_background_red"
+                        android:textColor="@color/quantum_white_100"
+                        android:onClick="onCreateRouteButtonClick"
+                        android:text="Создать маршрут" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/slidingAddingMarkerLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Добавление места"
+                        android:textAlignment="center" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/placeNameEditTextLayout"
+                        android:layout_width="290dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:inputType="textPersonName">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/markerNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:hint="Название"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/placePhotoImageView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:scaleType="centerCrop"
+                        android:transitionName="placePhotoTransition" />
+
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+
+                        android:background="@drawable/button_background"
+                        android:onClick="onPlaceImageButtonClick"
+                        android:text="Фото"
+                        android:textColor="@color/quantum_white_100" />
+
+                    <Button
+                        android:id="@+id/addMarkerButton"
+                        android:layout_width="200dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/button_background"
+                        android:onClick="onAddMarkerButtonClickListener"
+                        android:text="Добавить"
+                        android:textColor="@color/quantum_white_100" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</FrameLayout>

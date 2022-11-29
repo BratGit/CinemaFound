@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/splashColor" />
+
+    <item
+        android:left="30dp"
+        android:right="30dp"
+        android:bottom="300dp"
+        android:top="150dp">
+        <bitmap
+            android:gravity="center_vertical"
+            android:src="@drawable/cinemafoudlogowordlesssmall"/>
+    </item>
+
+
+
+</layer-list>

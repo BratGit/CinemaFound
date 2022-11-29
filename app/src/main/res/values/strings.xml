@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CinemaFound</string>
+    <array name="userTypes">
+        <item>Администратор</item>
+        <item>Пользователь</item>
+    </array>
+</resources>

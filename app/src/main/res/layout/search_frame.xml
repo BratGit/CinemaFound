@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+<!--        <ImageView-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:src="@drawable/search"-->
+<!--            android:layout_centerVertical="true"/>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:id="@+id/searchEditTextLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginLeft="70dp"-->
+<!--            android:inputType="textPersonName" >-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/searchEditText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:hint="Search"-->
+<!--                android:inputType="textVisiblePassword"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <SearchView
+            android:background="@color/splashColor"
+            android:id="@+id/placeSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:queryHint="Search..."
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:iconifiedByDefault="false"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"/>
+
+</LinearLayout>

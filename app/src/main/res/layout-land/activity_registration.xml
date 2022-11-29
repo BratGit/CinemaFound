@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center"
+    android:background="@color/colorGray"
+    tools:context="com.example.cinemafound.RegistrationActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="378dp"
+        android:layout_marginTop="140dp"
+        android:layout_height="535dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Регистрация"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="25sp"
+                app:fontFamily="casual" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registrationLoginEditTextLayout"
+                android:layout_width="290dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="textPersonName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registrationLoginEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Логин"
+                    android:inputType="textVisiblePassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Права доступа"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/userTypeSpinner"
+                android:layout_width="290dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registrationPasswordEditTextLayout"
+                android:layout_width="290dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTintMode="src_atop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registrationPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Пароль"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/photoButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background_red"
+                android:onClick="onUserImageButtonClick"
+                android:text="Фото" />
+
+            <Button
+                android:id="@+id/authorizationButton2"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_background"
+                android:onClick="onRegistrationButtonClick"
+                android:text="Зарегистрироваться" />
+
+            <ImageView
+                android:id="@+id/registrationUserPhotoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:id="@+id/registrationLogoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/cinemafoudlogowordless" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
